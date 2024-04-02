@@ -1,0 +1,37 @@
+{
+  "name": "nextjs-shopify-app-no-custom-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "next lint --fix",
+    "dev": "next dev",
+    "tunnel": "cloudflared tunnel --config .cloudflared/config.yml run",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "pre-commit": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "@shopify/admin-graphql-api-utilities": "^2.0.1",
+    "@shopify/app-bridge": "^3.4.3",
+    "@shopify/app-bridge-react": "^3.4.3",
+    "@shopify/app-bridge-utils": "^3.4.3",
+    "@shopify/polaris": "^10.10.1",
+    "@shopify/shopify-api": "^5.2.0",
+    "axios": "^1.1.3",
+    "axios-retry": "^3.3.1",
+    "graphql": "^16.6.0",
+    "ioredis": "^5.2.4",
+    "next": "^13.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.2",
+    "husky": "^8.0.1",
+    "@types/ioredis": "^4.28.10"
+  }
+}
